@@ -27,11 +27,12 @@ if (!defined('MYPLUGIN_PLUGIN_URL'))
 function my_default_post($content)
 {
   if (empty($content))
-    $content = "Your default text";
+    $content = "Jason Was Here!";
   return $content;
 }
 
 add_filter('the_editor_content', 'my_default_post');
+add_filter('default_title', 'my_default_post');
 
 
 
