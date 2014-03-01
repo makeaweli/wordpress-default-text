@@ -85,12 +85,12 @@ function default_text_page_section_callback() {
 function default_text_page_callback() {
   ?>
   <form method="POST" action="options.php">
-<?php settings_fields( 'options-default-text' ); //pass slug name of page, also referred
-                                        //to in Settings API as option group name
-do_settings_sections( 'options-default-text' );  //pass slug name of page
-submit_button();
-?>
-</form>
+  <?php settings_fields( 'options-default-text' ); //pass slug name of page, also referred
+                                          //to in Settings API as option group name
+  do_settings_sections( 'options-default-text' );  //pass slug name of page
+  submit_button();
+  ?>
+  </form>
 
   <h3>Variables</h3>
   <p>Use the variables to customize your title and body text. For example using <code>$username</code> would list the current users' username.
@@ -98,52 +98,26 @@ submit_button();
 }
 
 
-
+/*
+ * Output textarea for title
+ */
 function default_text_title_callback($args) {
      // Create a header in the default WordPress 'wrap' container
-         $html = '<textarea cols="72" rows="2" name="default_text_title" >' . get_option('default_text_title') . '</textarea><br /><code>' . default_post_title() . '</code>';
-
-                  
-     
+         $html = '<textarea cols="72" rows="2" name="default_text_title" >' . get_option('default_text_title') . '</textarea><br /><code>' . default_text_title() . '</code>'; 
     echo $html;
      
 } // end sandbox_toggle_header_callback
 
-function default_text_title_callback_org($args) {
+/*
+ * Output textarea for body
+ */
+function default_text_body_callback($args) {
      // Create a header in the default WordPress 'wrap' container
-         $html = '<div class="wrap">';
-             $html .= '<h2>Default Text Options</h2>';
-             $html .= '<p class="description">This plugin auto-populates the text and body fields of a new post.</p>';
-             $html .= '<table class="form-table">
-                <tbody>
-                  <tr>
-                    <th><label>Title</label></th>
-                    <td>
-                      <textarea cols="72" rows="2" name="default_text_title" >' . get_option('default_text_title') . '</textarea><br /><code>' . default_post_title() . '</code></td>
-
-                  </tr>
-
-                  <tr>
-                    <th><label>Body</label></th>
-                    <td>
-                      <textarea cols="72" rows="2" name="default_text_body" >' . get_option('default_text_body') . '</textarea><br /><code>' . default_post_title() . '</code></td>
-
-                  </tr>
-                </tbody>
-              </table>';
-
-              $html .= '<h3>Variables</h3>';
-              $html .= '<p>Use the variables to customize your title and body text. For example using <code>$username</code> would list the current users\' username.';
-
-    // Note the ID and the name attribute of the element should match that of the ID in the call to add_settings_field
-    $html .= '<input type="text" id="default_text_title" name="default_text_title" value="' .get_option('default_text_title') . '" />';
-     
-    // Here, we will take the first argument of the array and add it to a label next to the checkbox
-    $html .= '<label for="default_text"> Select which areas of content you wish to display.</label>';
-     
+         $html = '<textarea cols="72" rows="2" name="default_text_body" >' . get_option('default_text_body') . '</textarea><br /><code>' . default_text_body() . '</code>'; 
     echo $html;
      
-}
+} // end sandbox_toggle_header_callback
+
 
 
 
