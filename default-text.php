@@ -1,7 +1,7 @@
 <?php
 /**
  * @package default
- * @version 1.2
+ * @version 1.0
  */
 /*
 Plugin Name: Default Text
@@ -58,7 +58,7 @@ function default_text_variables() {
   // Get current user information
   $user = wp_get_current_user();
 
-  return array(
+  $variables =  array(
     // Current User
     '$username'=>$user->user_login,
     '$user_email'=>$user->user_email,
@@ -72,6 +72,12 @@ function default_text_variables() {
     '$d'=>date('d'),
     '$site'=>'GN'
   );
+
+  // Check if the Default Text Gemini plugin is installed
+  if(function_exists(default_text_gemini)) {
+    $variables = array_merge($variables, default_text_gemini());
+  }
+  return $variables;
 
 }
 
