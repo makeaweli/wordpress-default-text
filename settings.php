@@ -35,6 +35,13 @@ function default_text_initialize_options() {
         'options-default-text'                           // Page on which to add this section of options
     );
 
+    add_settings_section(
+        'default_text_variables_section',         // ID used to identify this section and with which to register options
+        'Default Text Variables',                  // Title to be displayed on the administration page
+        'default_text_page_section_variables_callback', // Callback used to render the description of the section
+        'options-default-text'                           // Page on which to add this section of options
+    );
+
     // Next, we will introduce the fields for toggling the visibility of content elements.
     add_settings_field( 
         'default_text_title',                      // ID used to identify the field throughout the theme
@@ -91,12 +98,23 @@ function default_text_page_callback() {
   submit_button();
   ?>
   </form>
-
-  <h3>Variables</h3>
-  <p>Use the variables to customize your title and body text. For example using <code>$username</code> would list the current users' username.
 <?php
 }
 
+/*
+ * Output section for variables
+ */
+function default_text_page_section_variables_callback() {
+?>
+  <p>Use the variables to customize your title and body text. For example using <code>$username</code> would list the current users' username.
+<?php
+  $variables = default_text_variables();
+  foreach($variables as $k=>$v) {
+echo <<<HEREDOC
+    $k
+HEREDOC;
+  }
+}
 
 /*
  * Output textarea for title
