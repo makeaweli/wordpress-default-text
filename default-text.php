@@ -8,7 +8,7 @@ Plugin Name: Default Text
 Plugin URI: http://wordpress.org/plugins/default-text/
 Description: Insert text defaults for new post title and body
 Author: Jason M. Kalawe
-Version: 1.0
+Version: 1.01
 Author URI: http://makea.kalawe.com
 
 */
