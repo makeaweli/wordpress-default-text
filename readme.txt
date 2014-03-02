@@ -37,10 +37,16 @@ Make sure that the function outputs an associative array in the following format
 
 == Changelog ==
 
+= 1.01 =
+* Animated GIF screenshot provided
+
 = 1.0 =
 * Initial version
 
 == Upgrade Notice ==
+
+= 1.01 =
+* Animated GIF screenshot provided
 
 = 1.0 =
 * Initial version
