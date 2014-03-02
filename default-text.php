@@ -70,7 +70,6 @@ function default_text_variables() {
     '$Y'=>date('Y'),
     '$M'=>date('M'),
     '$d'=>date('d'),
-    '$site'=>'GN'
   );
 
   // Check if the Default Text Gemini plugin is installed
