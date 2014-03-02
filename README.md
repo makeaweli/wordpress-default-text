@@ -1,12 +1,12 @@
-=== Wordpress Default Text ===
-Contributors: jkalawe
-Donate link: http://www.bgca.org
-Tags: template, default, editorial
-Requires at least: 3.0.1
-Tested up to: 3.8.1
-Stable tag: 1.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# Wordpress Default Text
++ Contributors: jkalawe
++ Donate link: http://www.bgca.org
++ Tags: template, default, editorial
++ Requires at least: 3.0.1
++ Tested up to: 3.8.1
++ Stable tag: 1.0
++ License: GPLv2 or later
++ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Insert configureable text defaults for new post title and body.
 
