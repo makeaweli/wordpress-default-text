@@ -24,7 +24,7 @@ Variables are available to customize your default text strings.
 
 ## Frequently Asked Questions
 
-# I'd like to include my own custom variables
+### I'd like to include my own custom variables
 
 Simply create a plugin with a function named `default_text_gemini`.
 
@@ -37,10 +37,10 @@ Make sure that the function outputs an associative array in the following format
 
 ## Changelog 
 
-# 1.0
+### 1.0
 * Initial version
 
 ## Upgrade Notice 
 
-# 1.0
+### 1.0
 * Initial version
