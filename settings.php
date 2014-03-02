@@ -105,15 +105,24 @@ function default_text_page_callback() {
  * Output section for variables
  */
 function default_text_page_section_variables_callback() {
-?>
-  <p>Use the variables to customize your title and body text. For example using <code>$username</code> would list the current users' username.
-<?php
+  // Get array of variables
   $variables = default_text_variables();
+?>
+  <p>Use the variables to customize your title and body text. For example using <code>$username</code> would list the current users' username <code><?php echo $variables['$username'];?></code>.</p>
+  <table class="form-table">
+    <tr>
+      <th>Variable</th>
+      <th>Value</th>
+    </tr>
+<?php
   foreach($variables as $k=>$v) {
 echo <<<HEREDOC
-    $k
+    <tr><th>$k</th><td>$v</td></tr>
 HEREDOC;
   }
+  ?>
+  </table>
+  <?php
 }
 
 /*
