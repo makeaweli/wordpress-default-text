@@ -10,37 +10,37 @@
 
 Insert configureable text defaults for new post title and body.
 
-== Description ==
+## Description
 
 Insert configureable text defaults for new post title and body.
 
 Variables are available to customize your default text strings.
 
 
-== Installation ==
+## Installation 
 
 1. Upload `default-text.zip` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
-= I'd like to include my own custom variables =
+# I'd like to include my own custom variables
 
 Simply create a plugin with a function named `default_text_gemini`.
 
 Make sure that the function outputs an associative array in the following format:
 `array('$variable'=>'value');`
 
-== Screenshots ==
+## Screenshots
 
 1. Demo of basic functionality.
 
-== Changelog ==
+## Changelog 
 
-= 1.0 =
+# 1.0
 * Initial version
 
-== Upgrade Notice ==
+## Upgrade Notice 
 
-= 1.0 =
+# 1.0
 * Initial version
