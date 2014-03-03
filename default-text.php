@@ -1,14 +1,14 @@
 <?php
 /**
  * @package default
- * @version 1.01
+ * @version 1.02
  */
 /*
 Plugin Name: Default Text
 Plugin URI: http://wordpress.org/plugins/default-text/
 Description: Insert text defaults for new post title and body
 Author: Jason M. Kalawe
-Version: 1.01
+Version: 1.02
 Author URI: http://makea.kalawe.com
 
 */
@@ -27,11 +27,9 @@ if (!defined('MYPLUGIN_PLUGIN_URL'))
 /*
  * Create the default text title string
  */
-function default_text_title($content)
+function default_text_title($content='')
 {
-  if (empty($content))
-    //GN (Night Tel|Night Obs|Day SOS|DA|Inst PoC) Shift Change Notes 2014Feb28 Jason Kalawe
-    //echo $site." (Night Tel|Night Obs|Day SOS|DA|Inst PoC) Shift Change Notes ".gmdate('YMd')." ".$profiledata->user_firstname." ".$profiledata->user_lastname;
+  if ($content=='')
 
     $content = strtr(get_option('default_text_title'), default_text_variables() );
 
@@ -42,9 +40,9 @@ function default_text_title($content)
 /*
  * Create the default text body string
  */
-function default_text_body($content)
+function default_text_body($content='')
 {
-  if (empty($content))
+  if ($content=='')
     //(Please remember to edit title and select categories.)
     $content = strtr(get_option('default_text_body'), default_text_variables() );
   return $content;

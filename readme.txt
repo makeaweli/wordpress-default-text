@@ -4,7 +4,7 @@ Donate link: http://www.bgca.org
 Tags: template, default, editorial
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 1.01
+Stable tag: 1.02
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Make sure that the function outputs an associative array in the following format
 
 == Changelog ==
 
+= 1.02 =
+* Default argument values included with `default_text_title` and `default_text_body` functions. Bug found by yoramzara.
+
 = 1.01 =
 * Animated GIF screenshot provided
 
@@ -44,6 +47,9 @@ Make sure that the function outputs an associative array in the following format
 * Initial version
 
 == Upgrade Notice ==
+
+= 1.02 =
+* Fix issue where error thrown on certain php installations if default argument for a function is not defined.
 
 = 1.01 =
 * Animated GIF screenshot provided
