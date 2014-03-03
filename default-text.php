@@ -1,14 +1,14 @@
 <?php
 /**
  * @package default
- * @version 1.02
+ * @version 1.03
  */
 /*
 Plugin Name: Default Text
 Plugin URI: http://wordpress.org/plugins/default-text/
 Description: Insert text defaults for new post title and body
 Author: Jason M. Kalawe
-Version: 1.02
+Version: 1.03
 Author URI: http://makea.kalawe.com
 
 */
@@ -23,15 +23,26 @@ if (!defined('MYPLUGIN_PLUGIN_DIR'))
 
 if (!defined('MYPLUGIN_PLUGIN_URL'))
     define('MYPLUGIN_PLUGIN_URL', WP_PLUGIN_URL . '/' . MYPLUGIN_PLUGIN_NAME);
+
+/*
+ * Return text string
+ * $type string Either 'title' or 'body'
+ */
+function default_text_string($type) {
+  if($type) {
+    return strtr(get_option('default_text_'. $type), default_text_variables() );
+  }
+
+  return '';
+}
  
 /*
  * Create the default text title string
  */
-function default_text_title($content='')
+function default_text_title($content)
 {
-  if ($content=='')
-
-    $content = strtr(get_option('default_text_title'), default_text_variables() );
+  if (empty($content))
+    $content = default_text_string('title');
 
   return $content;
     
@@ -40,11 +51,11 @@ function default_text_title($content='')
 /*
  * Create the default text body string
  */
-function default_text_body($content='')
+function default_text_body($content)
 {
-  if ($content=='')
-    //(Please remember to edit title and select categories.)
-    $content = strtr(get_option('default_text_body'), default_text_variables() );
+  if (empty($content))
+    $content = default_text_string('body');
+
   return $content;
     
 }

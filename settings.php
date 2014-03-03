@@ -129,22 +129,21 @@ HEREDOC;
  * Output textarea for title
  */
 function default_text_title_callback($args) {
-     // Create a header in the default WordPress 'wrap' container
-         $html = '<textarea cols="72" rows="2" name="default_text_title" >' . get_option('default_text_title') . '</textarea><br /><code>' . default_text_title() . '</code>'; 
-    echo $html;
      
-} // end sandbox_toggle_header_callback
+  $html = '<textarea cols="72" rows="2" name="default_text_title" >' . get_option('default_text_title') . '</textarea><br /><code>' . default_text_string('title') . '</code>'; 
+  echo $html;
+     
+}
 
 /*
  * Output textarea for body
  */
 function default_text_body_callback($args) {
-     // Create a header in the default WordPress 'wrap' container
-         $html = '<textarea cols="72" rows="2" name="default_text_body" >' . get_option('default_text_body') . '</textarea><br /><code>' . default_text_body() . '</code>'; 
-    echo $html;
      
-} // end sandbox_toggle_header_callback
-
+  $html = '<textarea cols="72" rows="2" name="default_text_body" >' . get_option('default_text_body') . '</textarea><br /><code>' . default_text_string('body') . '</code>'; 
+  echo $html;
+     
+}
 
 
 
