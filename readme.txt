@@ -51,6 +51,9 @@ Make sure that the function outputs an associative array in the following format
 
 == Changelog ==
 
+= 1.04 =
+* Cleaned-up readme and added screenshot of settings
+
 = 1.03 =
 * Created function `default_text_string` to fix other conditions with bug found by yoramzara.
 
@@ -64,6 +67,9 @@ Make sure that the function outputs an associative array in the following format
 * Initial version
 
 == Upgrade Notice ==
+
+= 1.04 =
+* Documentation more user-friendly with exanded FAQ and screenshot of settings. No code/bug fixes.
 
 = 1.03 =
 * Created function `default_text_string` to fix other conditions with bug found by yoramzara.
