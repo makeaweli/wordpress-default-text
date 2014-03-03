@@ -1,21 +1,26 @@
 === Wordpress Default Text ===
 Contributors: jkalawe
 Donate link: http://www.bgca.org
-Tags: template, default, editorial
+Tags: template, default, editorial, multisite
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 1.03
+Stable tag: 1.04
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Insert configureable text defaults for new post title and body.
+Insert configureable text defaults for new content title and body fields.
 
 == Description ==
 
-Insert configureable text defaults for new post title and body.
+Default Text is a a helpful workflow tool:
+* Enforce editorial standards for title and body styles
+* A quick reference for content editors that aren't regular contributors
 
-Variables are available to customize your default text strings.
+= Variables =
+Variables are available to customize your default text strings. You can create your own custom variables also! Consult the FAQ for more details.
 
+= Multisite =
+Default Text is also multisite compatible as it has been designed for a multisite environment.
 
 == Installation ==
 
@@ -24,16 +29,25 @@ Variables are available to customize your default text strings.
 
 == Frequently Asked Questions ==
 
+= I want a page/post to have a blank body, i.e. no text =
+
+Simply add a space or other invisible character. One is enough.
+
+
 = I'd like to include my own custom variables =
 
-Simply create a plugin with a function named `default_text_gemini`.
+Default Text checks for the existance of a function named `default_text_gemini` before outputting title or body text.
+
+Either inclue this function in your themes `functions.php` file or in a custom plugin.
 
 Make sure that the function outputs an associative array in the following format:
 `array('$variable'=>'value');`
 
 == Screenshots ==
 
-1. Demo of basic functionality.
+1. Animated demo of functionality including use of custom variables.
+
+2. Settings view in it's entirety.
 
 == Changelog ==
 
