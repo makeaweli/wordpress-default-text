@@ -1,14 +1,14 @@
 <?php
 /**
  * @package default
- * @version 1.03
+ * @version 1.04
  */
 /*
 Plugin Name: Default Text
 Plugin URI: http://wordpress.org/plugins/default-text/
 Description: Insert text defaults for new post title and body
 Author: Jason M. Kalawe
-Version: 1.03
+Version: 1.04
 Author URI: http://makea.kalawe.com
 
 */
