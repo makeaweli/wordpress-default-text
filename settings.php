@@ -86,7 +86,7 @@ function default_text_initialize_options() {
  * HTML render section description
  */
 function default_text_page_section_callback() {
-  echo 'This plugin auto-populates the text and body fields of a new post.';
+  echo 'This plugin auto-populates the text and body fields of new content.';
 } 
 
 function default_text_page_callback() {
@@ -109,6 +109,9 @@ function default_text_page_section_variables_callback() {
   $variables = default_text_variables();
 ?>
   <p>Use the variables to customize your title and body text. For example using <code>$username</code> would list the current users' username <code><?php echo $variables['$username'];?></code>.</p>
+
+  <p>You can also include <a href="https://wordpress.org/plugins/default-text/faq/">your own custom variables</a>.</p>
+
   <table class="form-table">
     <tr>
       <th>Variable</th>
